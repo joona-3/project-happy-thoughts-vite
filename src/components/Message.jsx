@@ -1,15 +1,8 @@
-export const Message = ({ recentMessage }) => {
+export const Message = ({ message }) => {
 
-    // {recentMessage.map((message) => (
-    //     <p>{message}</p>
-    // ))}
   return (
     <div>
-
-    {recentMessage}
+      {message}
     </div>
-
-
-
-  )
-}
+  );
+};
