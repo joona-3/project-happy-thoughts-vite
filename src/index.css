@@ -8,7 +8,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  padding:0;
+  margin: 0;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -25,21 +28,113 @@ code {
   margin: 0;
 }
 
-.wrapper {
+.wrapper-main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 20px auto;
+  gap: 40px
+}
+.wrapper-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  gap: 25px;
+}
+
+.wrapper-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .message-list {
   display: flex;
-  gap: 25px;
   flex-direction: column;
+  align-items: center;
+  width: 70%;
+  gap: 25px;
 }
 
 .recent-message {
+  width:100%;
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(105, 105, 105);
   padding: 20px;
   box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1)
+}
+
+.post-card {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  border: 1px solid rgb(105, 105, 105);
+  padding: 10px 35px 20px 35px;
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1)
+}
+
+.add-post form textarea{
+  font-size: 18px;
+  width: 100%;
+  background: white;
+  text-align: center;
+  margin: 20px 0;
+}
+.add-post form button {
+  background-color: #ffb7d2;
+  border-radius: 25px;
+  padding: 5px 10px;
+  border: none;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-post form h2 {
+ font-size: 26px;
+}
+
+.emoji {
+  font-size: 24px;
+}
+
+
+.recent-message > p {
+  margin: 10px 0 15px;
+  font-size: 18px;
+}
+.like {
+  display:flex;
+  align-items: center;
+}
+.like p{
+  padding-left: 5px;
+}
+
+.time {
+  color:gray;
+}
+.like button {
+  background-color:#d1d1d1;
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  float:left;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper-main {
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 24px;
+  }
 }

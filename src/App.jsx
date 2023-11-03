@@ -3,7 +3,7 @@ import { Header } from "./components/Header";
 // import { Header } from "./components/Header";
 
 export const App = () => {
-  return <div>
+  return <div className="wrapper-main">
     <Header />
     <HappyThoughts />
   </div>;

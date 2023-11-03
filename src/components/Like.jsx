@@ -27,7 +27,7 @@ export const Like = ({ id, hearts, updateTotalLikes }) => {
 
     return (
         <div className="like">
-            <button onClick={handleLikeBtn}>{myLikes ? `💖` : `💜`}</button>
+            <button onClick={handleLikeBtn}><span className="emoji">{myLikes ? `💖` : `❤️`}</span></button>
             <p>x{likeThought}</p>
             {/* <p>Total likes: {storeLikes}</p> */}
         </div>
