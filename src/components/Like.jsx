@@ -21,7 +21,7 @@ export const Like = ({ id, hearts }) => {
 
     return (
         <div className="like">
-            <button onClick={handleLikeBtn}>💜</button>
+            <button onClick={handleLikeBtn}><span className="emoji">❤️</span></button>
             <p>x{likeThought}</p>
         </div>
     );

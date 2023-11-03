@@ -29,11 +29,12 @@ export const HappyThoughts = () => {
         //Map through the data to get the individual objects and their keys
         data.map(
             ({ _id, message, hearts, createdAt }) => (
-                <section key={_id}>
+                <section className="message-list" key={_id}>
                     <Card
                         id={_id}
                         message={message}
                         hearts={hearts}
+                        time={createdAt}
                     />
                 </section>
             ))
@@ -46,7 +47,7 @@ export const HappyThoughts = () => {
 
 
     return (
-        <div>
+        <div className="wrapper-card">
             <PostCard
                 url={url}
                 fetchThoughts={fetchThoughts}

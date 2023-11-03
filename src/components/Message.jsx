@@ -1,8 +1,8 @@
 export const Message = ({ message }) => {
 
   return (
-    <div>
+    <p>
       {message}
-    </div>
+    </p>
   );
 };
