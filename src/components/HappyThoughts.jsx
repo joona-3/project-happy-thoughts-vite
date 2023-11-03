@@ -7,6 +7,7 @@ export const HappyThoughts = () => {
     const url = "https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts";
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [totalLikes, setTotalLikes] = useState(0);
 
     const fetchThoughts = async () => {
         //Set loading to true when initializing the fetch
@@ -25,6 +26,11 @@ export const HappyThoughts = () => {
         }
     };
 
+    //Function to update Total Likes
+    const updateTotalLikes = () => {
+        setTotalLikes((previousTotalLikes) => previousTotalLikes + 1);
+    };
+
     const renderThoughts = () => (
         //Map through the data to get the individual objects and their keys
         data.map(
@@ -34,6 +40,7 @@ export const HappyThoughts = () => {
                         id={_id}
                         message={message}
                         hearts={hearts}
+                        updateTotalLikes={updateTotalLikes}
                     />
                 </section>
             ))
@@ -52,6 +59,7 @@ export const HappyThoughts = () => {
                 fetchThoughts={fetchThoughts}
             />
             {(loading === true) && <p>Loading thoughts...</p>}
+            <p>Total likes: {totalLikes}</p>
             {renderThoughts()}
         </div>
     );
