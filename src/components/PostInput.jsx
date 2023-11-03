@@ -3,18 +3,15 @@ export const PostInput = ({ inputValue, handleSubmit, handleInputChange }) => {
     return (
         <div className="add-post">
             <form id="form">
-                <label>
-                    What is making you happy right now?
-                    <input
-                        type="text"
-                        value={inputValue}
-                        onChange={handleInputChange}
-                    />
-                </label>
+                <h2>What is making you happy right now?</h2>
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={handleInputChange}
+                />
                 <button onClick={handleSubmit}>💜 Send Happy Thought 💜</button>
             </form>
 
         </div>
     )
-
 }

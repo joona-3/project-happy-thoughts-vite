@@ -4,16 +4,18 @@ export const Like = ({ id, hearts }) => {
     const [likeThought, setLikeThought] = useState(hearts);
     const heartsUrl = `https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts/${id}/like`;
 
+    //Function to handle like-button
     const handleLikeBtn = async () => {
         try {
             const response = await fetch(heartsUrl, {
                 method: 'POST',
             });
             if (response.ok) {
-                setLikeThought((previousLikes) => previousLikes + 1)
+                //Increase the hearts by 1 and add it to the new state
+                setLikeThought((previousLikes) => previousLikes + 1);
             };
         } catch (error) {
-            console.log("Error:", error)
+            console.log("Error:", error);
         }
     };
 
