@@ -1,6 +1,6 @@
 import { Message } from "./Message";
 import { Like } from "./Like";
-// import { TimeIndicaton } from "./TimeIndication";
+import { TimeIndication } from "./TimeIndication";
 
 export const Card = ({ id, message, hearts, time, updateTotalLikes }) => {
 
