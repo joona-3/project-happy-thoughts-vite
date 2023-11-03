@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.message-list {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+.recent-message {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(105,105,105);
+  padding: 20px;
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1)
+}
