@@ -8,10 +8,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 * {
-  padding:0;
+  padding: 0;
   margin: 0;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -36,11 +38,12 @@ code {
   margin: 20px auto;
   gap: 40px
 }
+
 .wrapper-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:100%;
+  width: 100%;
   gap: 25px;
 }
 
@@ -59,7 +62,7 @@ code {
 }
 
 .recent-message {
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(105, 105, 105);
@@ -77,13 +80,14 @@ code {
   box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1)
 }
 
-.add-post form textarea{
+.add-post form textarea {
   font-size: 18px;
   width: 100%;
   background: white;
   text-align: center;
   margin: 20px 0;
 }
+
 .add-post form button {
   background-color: #ffb7d2;
   border-radius: 25px;
@@ -96,7 +100,7 @@ code {
 }
 
 .add-post form h2 {
- font-size: 26px;
+  font-size: 26px;
 }
 
 .emoji {
@@ -104,27 +108,31 @@ code {
 }
 
 
-.recent-message > p {
+.recent-message>p {
   margin: 10px 0 15px;
   font-size: 18px;
+  hyphens: auto;
 }
+
 .like {
-  display:flex;
+  display: flex;
   align-items: center;
 }
-.like p{
+
+.like p {
   padding-left: 5px;
 }
 
 .time {
-  color:gray;
+  color: gray;
 }
+
 .like button {
-  background-color:#d1d1d1;
+  background-color: #d1d1d1;
   border-radius: 50%;
   padding: 10px;
   border: none;
-  float:left;
+  float: left;
 }
 
 @media only screen and (max-width: 768px) {
